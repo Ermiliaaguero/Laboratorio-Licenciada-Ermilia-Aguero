@@ -1,0 +1,493 @@
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none; 
+}
+
+body {
+	font-family: 'roboto',sans-serif; 
+	background-image: linear-gradient(0deg, rgba(0,0,0,0.05),rgba(0,0,0,0.05)),url(imagenes/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} 
+
+
+@media (max-width: 900px) {
+
+	p {
+		font-size: 1.5vw;
+	}
+
+	a {
+		font-size: 1.7vw;
+	}
+
+}
+
+
+/*cabesera*/
+
+.header {
+    margin: auto;
+    position: sticky;/*coloca la cabesera pegajosa a la parte superior*/
+	top: 0;
+}
+
+.cabesera {
+	background: linear-gradient(to right, rgba(24,243,90,1),rgba(10,182,96,1) );
+	height: 80px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/*boton del menu*/
+
+.cabesera a {
+	padding: 1.5vw;
+	font-size: 2.0vw;
+	color: #000000;
+	width: 100%;
+	border-radius: 20px;
+	box-shadow: 0px 0px 5px 3px #CFCFCF;
+	transition: .3s ease-in-out all;
+	text-align: center;
+	margin: 0px 5px;
+}
+
+/*al seleccionar el los botones*/
+.cabesera a:hover {
+	color: #793FDF;
+	background: #0DCCAF;
+	border-radius: 5px;
+}
+
+.cabesera img {
+	width: 90px; 
+	height: auto;
+	border-radius: 30px;
+}
+
+/*fin de cabesera*/
+
+/*pagina inicio*/
+
+#nosotros {
+    display: flex;
+	width: auto;
+	background: rgb(204,204,204,0.5);
+	border: 5px solid #ddd;
+}
+
+#nosotros h1 {
+	text-align: center;
+	font-size: 2.5em;
+	margin: 20px;
+	text-shadow: 2px 5px 10px #000;
+}
+
+#nosotros p {
+	text-align: center;
+	margin: 20px;
+	font-size: 1.5em;
+}
+
+#inicio {
+	width: 40vw;
+	height: auto;
+	border-radius: 40px;
+}
+
+.titulo_nos {
+	margin: 20px;
+	text-align: center;
+	text-shadow: 2px 5px 10px #000;
+}
+
+#entrada {
+	width: 100%;
+	height: 300px;
+}
+
+/*carrusel*/
+
+.position {
+	top: 60vw;
+	left: 10vh;
+
+}
+
+.slider {
+	background-image: url(carrusel/1.jpg);
+	background-size: cover;
+	height: 65vh;
+	width: 45vw;
+	border-radius: 10px;
+	animation: animate 30s infinite;
+}
+
+@keyframes animate {
+	20% {
+		background-image: url(carrusel/1.jpg);
+		background-size: cover;
+	}
+	40% {
+		background-image: url(carrusel/2.jpg);
+		background-size: cover;
+	}
+	60% {
+		background-image: url(carrusel/3.jpg);
+		background-size: cover;
+	}
+	80% {
+		background-image: url(carrusel/4.jpg);
+		background-size: cover;
+	}
+	100% {
+		background-image: url(carrusel/5.jpg);
+		background-size: cover;
+	}
+}
+
+/*fin carrusel*/
+
+/*fin de pagina inicio*/
+
+/*pagina nosotros*/
+
+#historia {
+	background-image: 
+    linear-gradient(0deg, rgba(0,0,0,0.4),rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.4)),url(imagenes/historia.jpg);
+    padding: 1%;
+    margin: 80px 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40px;
+    color: aliceblue;
+}
+
+#historia div{
+	text-align: center;
+}
+
+#historia h2 {
+	text-align: center;
+	font-size: 2.5em;
+}
+
+#historia p {
+	text-align: center;
+	margin: 20px;
+	font-size: 1.1em;
+}
+
+#duo {
+	display: flex;
+	width: auto;
+	margin-bottom: 20px;
+}
+
+#mision {
+	background-image: 
+    linear-gradient(0deg, rgba(0, 0,0,0.4),rgba(0, 0,0,0.8)),url(imagenes/mision.jpg);
+    padding: 40px;
+    margin: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40px;
+    color: aliceblue;
+}
+
+#mision h2 {
+	text-align: center;
+}
+
+#mision p {
+	text-align: center;
+	margin: 20px;
+}
+
+#vision {
+	background-image: 
+    linear-gradient(0deg, rgba(0, 0,0,0.4),rgba(0, 0,0,0.8)),url(imagenes/vision.jpg);
+    padding: 40px;
+    margin: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40px;
+    color: aliceblue;
+}
+
+#vision h2 {
+	text-align: center;
+}
+
+#vision p {
+	text-align: center;
+	margin: 20px;
+}
+
+/*fin de pagina nosotros*/
+
+/*pagina examenes*/
+
+#examenes-info {
+	background-color: rgba(182,255,255,0.5);
+	padding: 10px;
+    color: aliceblue;
+    text-align: center;
+}
+
+#examenes-info #div-examenes{
+	display: flex;
+	padding: 100px 0px;
+	justify-content: center;
+}
+
+#examenes-info h3{
+    color: white;
+    margin: 0;
+    font-size: 2.7em;
+}
+
+#examenes-info h2{
+	ext-align: center;
+	margin: 40px 200px;
+	font-size: 6vw;
+	background: linear-gradient(rgba(0,204,71,1),rgba(0,83,206,0.7) );
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+}
+
+.carta li {
+	list-style: none;
+	font-size: 1.5vw;
+}
+
+#examenes-info .carta{
+    padding: 1.2vw;
+    margin: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.carta:first-child{
+    background-image: 
+    linear-gradient(0deg, rgba(0, 0,0,0.5),rgba(0, 0,0,0.5)),url(imagenes/lab3.jpg);
+}
+.carta:nth-child(2){
+    background-image: 
+    linear-gradient(0deg, rgba(0, 0,0,0.5),rgba(0, 0,0,0.5)),url(imagenes/lab.jpg);
+}
+.carta:last-child{
+    background-image: 
+    linear-gradient(0deg, rgba(0, 0,0,0.5),rgba(0, 0,0,0.5)),url(imagenes/lab1.jpg);
+}
+
+#otros .carta {
+	background-image: 
+    linear-gradient(0deg, rgba(0, 0,0,0.5),rgba(0, 0,0,0.5)),url(imagenes/lab2.jpg);
+	column-count: 2;
+	margin: 40px;
+	margin-right: 40px;
+	margin-left: 40px;
+}
+
+#otros .carta div {
+	margin: 20px;
+	text-align: center;
+	background-position: center;
+}
+
+/*fin de pagina examenes*/
+
+/*pagina contactos*/
+
+#horario {
+	text-align: center;
+	background: #58F5A3;
+	margin: 40px 140px;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+#redes {
+	background: rgba(182,255,255,0.5);
+	text-align: center;
+	padding: 20px;
+	margin-top: 0px;
+	margin-bottom: 4px;
+	margin-left: 40px;
+	margin-right: 40px;
+	border-radius: 20px;
+}
+
+.sociale a {
+	margin: 1vw;
+}
+
+.sociale h4 {
+	margin: 1.5vw;
+}
+
+#ubicacion {
+	background: rgba(182,255,255,0.5);
+	text-align: center;
+	padding: 20px;
+	margin-top: 0px;
+	margin-bottom: 4px;
+	margin-left: 40px;
+	margin-right: 40px;
+	border-radius: 20px;
+}
+
+.letra {
+	font-size: 1.1em;
+}
+
+/*fin de pagina contactos*/
+
+/*pagina labores*/
+
+.fadadol h1 {
+	text-align: center;
+	margin: 40px 200px;
+	font-size: 6vw;
+	color: #0A9A35;
+	text-shadow: 8px 8px 8px #000000;
+}
+
+.fadadol h2 {
+	text-align: center;
+}
+
+.fadadol p {
+	text-align: center;
+	background: linear-gradient(to right, rgba(73,245,125,1),rgba(10,184,62,1) );
+	margin: 40px 200px;
+	padding: 20px;
+	border-radius: 30px;
+	font-size: 1.2em;
+}
+
+/*carrusel*/
+
+.slider-frame {
+  width: 500px;
+  height: 40%;
+  margin:40px auto ;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider-frame ul {
+  display: flex;
+  padding: 0;
+  width: 2500px;
+  
+  animation: slide 30s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+  width: 100%;
+  list-style: none;
+}
+
+.slider-frame img {
+  width: 100%;
+}
+
+@keyframes slide {
+  10% {margin-left: 0;}
+  15% {margin-left: 0;}
+  
+  35% {margin-left: -100%;}
+  40% {margin-left: -100%;}
+  
+  55% {margin-left: -200%;}
+  60% {margin-left: -200%;}
+  
+  75% {margin-left: -300%;}
+  80% {margin-left: -300%;}
+
+  95% {margin-left: -400%;}
+  100% {margin-left: -400%;}
+}
+
+/*fin carrusel*/
+
+/*carrusel limpieza*/
+
+.slider-limpieza {
+  width: 1000px;
+  height: 300px;
+  margin:40px auto ;
+  overflow: hidden;
+}
+
+.slider-limpieza ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  
+  animation: slider 30s infinite alternate ease-in-out;
+}
+
+.slider-limpieza li {
+  width: 100%;
+  list-style: none;
+}
+
+.slider-limpieza img {
+  width: 100%;
+}
+
+@keyframes slider {
+  20% {margin-left: 0;}
+  25% {margin-left: 0;}
+  
+  45% {margin-left: -100%;}
+  50% {margin-left: -100%;}
+  
+  70% {margin-left: -200%;}
+  75% {margin-left: -200%;}
+  
+  95% {margin-left: -300%;}
+  100% {margin-left: -300%;}
+}
+
+/*fin carrusel limpieza*/
+
+
+
+/*fin de pagina labores*/
+
+/*pie de pagina*/
+
+.container p {
+	margin: 5px;
+
+}
+
+.container {
+	padding: 8px;
+	background: #A2A2A2;
+	display: flex;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: all;
+}
+/*fin del pie de pagina*/
