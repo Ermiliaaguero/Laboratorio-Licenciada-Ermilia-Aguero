@@ -102,7 +102,7 @@ body {
 	.cabesera nav {
 		display: block;
 		position: fixed;
-		top: 13vh;
+		top: 12vh;
 		left: -100%;
 		background: linear-gradient(to right, rgba(24,243,90,1),rgba(10,182,96,1) );
 		width: 100%;
