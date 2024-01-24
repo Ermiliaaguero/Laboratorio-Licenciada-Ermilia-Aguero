@@ -62,6 +62,7 @@ body {
 }
 
 /*al seleccionar el los botones*/
+
 .cabesera a:hover {
 	color: #793FDF;
 	background: #0DCCAF;
@@ -72,6 +73,55 @@ body {
 	width: 90px; 
 	height: auto;
 	border-radius: 30px;
+}
+
+.menu-icon img {
+	width: 50px;
+	height: 50px;
+	border-radius: 2px;
+}
+
+.menu-icon, #check{
+	display: none;
+}
+
+@media (max-width: 768px){
+
+	.checkbtn {
+		display: block;
+	}
+
+	.menu-icon {
+		display: block;
+		top: 4vh;
+		width: 0%;
+		margin: 5vw;
+		cursor: pointer;
+	}
+
+	.cabesera nav {
+		display: block;
+		position: fixed;
+		top: 13vh;
+		left: -100%;
+		background: linear-gradient(to right, rgba(24,243,90,1),rgba(10,182,96,1) );
+		width: 100%;
+		height: 100vh;
+		right: 0;
+	}
+
+	.cabesera nav a {
+		padding: 2rem;
+		display: flex;
+		justify-content: center;
+		margin: 0;
+		font-size: 4vw;
+	}
+
+	#check:checked ~ nav {
+		left: 0;
+	}
+
 }
 
 /*fin de cabesera*/
@@ -102,12 +152,6 @@ body {
 	width: 40vw;
 	height: auto;
 	border-radius: 40px;
-}
-
-.titulo_nos {
-	margin: 20px;
-	text-align: center;
-	text-shadow: 2px 5px 10px #000;
 }
 
 #entrada {
@@ -157,15 +201,34 @@ body {
 
 /*fin carrusel*/
 
+@media (max-width: 768px) {
+
+	#nosotros {
+		display: block;
+	}
+
+	.slider {
+		width: 98vw;
+		height: 50vh;
+	}
+
+}
+
 /*fin de pagina inicio*/
 
 /*pagina nosotros*/
+
+.titulo_nos {
+	margin: 20px;
+	text-align: center;
+	text-shadow: 2px 5px 10px #000;
+}
 
 #historia {
 	background-image: 
     linear-gradient(0deg, rgba(0,0,0,0.4),rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.4)),url(imagenes/historia.jpg);
     padding: 1%;
-    margin: 80px 120px;
+    margin: 8vw 1vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -184,21 +247,21 @@ body {
 
 #historia p {
 	text-align: center;
-	margin: 20px;
-	font-size: 1.1em;
+	margin: 2vw;
+	font-size: 1.4em;
 }
 
 #duo {
 	display: flex;
 	width: auto;
-	margin-bottom: 20px;
+	margin-bottom: 2vw;
 }
 
 #mision {
 	background-image: 
     linear-gradient(0deg, rgba(0, 0,0,0.4),rgba(0, 0,0,0.8)),url(imagenes/mision.jpg);
-    padding: 40px;
-    margin: 10px;
+    padding: 4vw;
+    margin: 1vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -212,14 +275,15 @@ body {
 
 #mision p {
 	text-align: center;
-	margin: 20px;
+	margin: 0.5vw;
+	font-size: 1.2em;
 }
 
 #vision {
 	background-image: 
     linear-gradient(0deg, rgba(0, 0,0,0.4),rgba(0, 0,0,0.8)),url(imagenes/vision.jpg);
-    padding: 40px;
-    margin: 10px;
+    padding: 4vw;
+    margin: 1vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -233,7 +297,16 @@ body {
 
 #vision p {
 	text-align: center;
-	margin: 20px;
+	margin: 0.5vw;
+	font-size: 1.2em
+}
+
+@media (max-width: 600px){
+
+	#duo {
+		display: block;
+	}
+
 }
 
 /*fin de pagina nosotros*/
@@ -242,15 +315,20 @@ body {
 
 #examenes-info {
 	background-color: rgba(182,255,255,0.5);
-	padding: 10px;
+	padding: 5vw;
     color: aliceblue;
     text-align: center;
 }
 
 #examenes-info #div-examenes{
-	display: flex;
-	padding: 100px 0px;
+	padding: 10vw 0px;
 	justify-content: center;
+}
+
+@media (min-width: 770px){
+	#div-examenes {
+		display: flex;
+	}
 }
 
 #examenes-info h3{
@@ -261,133 +339,99 @@ body {
 
 #examenes-info h2{
 	ext-align: center;
-	margin: 40px 200px;
-	font-size: 6vw;
+	margin: 6vw 14vw;
+	font-size: 2.0em;
 	background: linear-gradient(rgba(0,204,71,1),rgba(0,83,206,0.7) );
 	color: transparent;
 	background-clip: text;
 	-webkit-background-clip: text;
 }
 
-.carta li {
+#div-examenes .carta_1,.carta_2,.carta_3,.carta_4,.carta_5, li {
 	list-style: none;
-	font-size: 1.5vw;
+	font-size: 1em;
 }
 
-#examenes-info .carta{
-    padding: 1.2vw;
-    margin: 20px;
+#examenes-info .carta_1,.carta_2,.carta_3,.carta_4,.carta_5{
+    padding: 2.5vw;
+    margin: 1.0vw;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 15px;
 }
 
-.carta:first-child{
+.carta_1{
     background-image: 
     linear-gradient(0deg, rgba(0, 0,0,0.5),rgba(0, 0,0,0.5)),url(imagenes/lab3.jpg);
 }
-.carta:nth-child(2){
+.carta_2{
     background-image: 
     linear-gradient(0deg, rgba(0, 0,0,0.5),rgba(0, 0,0,0.5)),url(imagenes/lab.jpg);
 }
-.carta:last-child{
+.carta_3{
     background-image: 
     linear-gradient(0deg, rgba(0, 0,0,0.5),rgba(0, 0,0,0.5)),url(imagenes/lab1.jpg);
 }
 
-#otros .carta {
+#otros .carta_4 {
 	background-image: 
     linear-gradient(0deg, rgba(0, 0,0,0.5),rgba(0, 0,0,0.5)),url(imagenes/lab2.jpg);
 	column-count: 2;
-	margin: 40px;
-	margin-right: 40px;
-	margin-left: 40px;
+	margin: 4vw;
 }
 
-#otros .carta div {
-	margin: 20px;
-	text-align: center;
-	background-position: center;
+#otros .carta_5 {
+	background-image: 
+    linear-gradient(0deg, rgba(0, 0,0,0.5),rgba(0, 0,0,0.5)),url(imagenes/lab4.jpg);
+	column-count: 2;
+	margin: 4vw;
 }
 
 /*fin de pagina examenes*/
 
-/*pagina contactos*/
-
-#horario {
-	text-align: center;
-	background: #58F5A3;
-	margin: 40px 140px;
-	padding: 10px;
-	border-radius: 10px;
-}
-
-#redes {
-	background: rgba(182,255,255,0.5);
-	text-align: center;
-	padding: 20px;
-	margin-top: 0px;
-	margin-bottom: 4px;
-	margin-left: 40px;
-	margin-right: 40px;
-	border-radius: 20px;
-}
-
-.sociale a {
-	margin: 1vw;
-}
-
-.sociale h4 {
-	margin: 1.5vw;
-}
-
-#ubicacion {
-	background: rgba(182,255,255,0.5);
-	text-align: center;
-	padding: 20px;
-	margin-top: 0px;
-	margin-bottom: 4px;
-	margin-left: 40px;
-	margin-right: 40px;
-	border-radius: 20px;
-}
-
-.letra {
-	font-size: 1.1em;
-}
-
-/*fin de pagina contactos*/
-
 /*pagina labores*/
 
-.fadadol h1 {
+.labores h1 {
 	text-align: center;
-	margin: 40px 200px;
-	font-size: 6vw;
+	margin: 2vw 20vw;
+	font-size: 10vw;
 	color: #0A9A35;
 	text-shadow: 8px 8px 8px #000000;
 }
 
-.fadadol h2 {
+.labores h2 {
 	text-align: center;
+	margin: 4vw;
 }
 
-.fadadol p {
+.labores p {
 	text-align: center;
 	background: linear-gradient(to right, rgba(73,245,125,1),rgba(10,184,62,1) );
-	margin: 40px 200px;
-	padding: 20px;
+	margin: 4vw 20vw;
+	padding: 4vw;
 	border-radius: 30px;
 	font-size: 1.2em;
+}
+
+.fadadol {
+	background: rgb(204,204,204,0.7);
+	border: 5px solid #ddd;
+	padding: 2vw;
+}
+
+@media (max-width: 550px){
+	.labores p {
+		margin: 4vw 4vw;
+	}
 }
 
 /*carrusel*/
 
 .slider-frame {
-  width: 500px;
-  height: 40%;
-  margin:40px auto ;
+  width: 98vw;
+  height: 99vh;
+  margin:40px auto;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -395,18 +439,18 @@ body {
 .slider-frame ul {
   display: flex;
   padding: 0;
-  width: 2500px;
+  width: 98vw;
   
   animation: slide 30s infinite alternate ease-in-out;
 }
 
 .slider-frame li {
-  width: 100%;
+  width: 98vw;
   list-style: none;
 }
 
 .slider-frame img {
-  width: 100%;
+  width: 98vw;
 }
 
 @keyframes slide {
@@ -431,8 +475,8 @@ body {
 /*carrusel limpieza*/
 
 .slider-limpieza {
-  width: 1000px;
-  height: 300px;
+  width: 98vw;
+  height: 99vh;
   margin:40px auto ;
   overflow: hidden;
 }
@@ -440,18 +484,18 @@ body {
 .slider-limpieza ul {
   display: flex;
   padding: 0;
-  width: 400%;
+  width: 398vw;
   
   animation: slider 30s infinite alternate ease-in-out;
 }
 
 .slider-limpieza li {
-  width: 100%;
+  width: 98vw;
   list-style: none;
 }
 
 .slider-limpieza img {
-  width: 100%;
+  width: 98vw;
 }
 
 @keyframes slider {
@@ -470,19 +514,85 @@ body {
 
 /*fin carrusel limpieza*/
 
-
-
 /*fin de pagina labores*/
+
+/*pagina contactos*/
+
+#horario {
+	text-align: center;
+	background: #58F5A3;
+	margin: 2vw 14vw;
+	padding: 1vw;
+	border-radius: 10px;
+}
+
+#redes {
+	background: rgba(182,255,255,0.5);
+	text-align: center;
+	padding: 2vw;
+	margin-top: 0px;
+	margin-bottom: 4px;
+	margin-left: 40px;
+	margin-right: 40px;
+	border-radius: 20px;
+}
+
+#redes h2 {
+	margin: 1.8vw;
+}
+
+.sociale a {
+	margin: 1vw;
+}
+
+.sociale h4 {
+	margin: 1.5vw;
+}
+
+#ubicacion {
+	background: rgba(182,255,255,0.5);
+	text-align: center;
+	padding: 2vw;
+	margin-top: 0px;
+	margin-bottom: 4px;
+	margin-left: 40px;
+	margin-right: 40px;
+	border-radius: 20px;
+}
+
+.letra {
+	font-size: 1.1em;
+}
+
+#red {
+	display: flex;
+	justify-content: center;
+}
+
+@media (max-width: 365px){
+
+	#red {
+		display: block;
+	}
+
+}
+
+/*fin de pagina contactos*/
 
 /*pie de pagina*/
 
 .container p {
 	margin: 5px;
+	font-size: 2vw;
+}
 
+.container img {
+	width: 6.5vw;
+	height: 6vw;
 }
 
 .container {
-	padding: 8px;
+	padding: 1vw;
 	background: #A2A2A2;
 	display: flex;
 	left: 0;
@@ -490,4 +600,5 @@ body {
 	bottom: 0;
 	position: all;
 }
+
 /*fin del pie de pagina*/
